@@ -163,7 +163,9 @@ contract ForgeToken is ERC1155PresetMinterPauserUpgradeable {
         uint256 expiration,
         string memory ipfsHash
     ) external payable virtual {
-        uint256 amountFee = ethFee.mul(amountTokens);
+        // uint256 amountFee = ethFee.mul(amountTokens);
+
+        uint256 amountFee = ethFee;
 
         require(msg.value >= amountFee, "Not enough ETH sent");
 
@@ -214,7 +216,9 @@ contract ForgeToken is ERC1155PresetMinterPauserUpgradeable {
         if (minBalance > 0)
             require(tokenAddress != address(0), "Invalid Address");
 
-        uint256 amountFee = zutFee.mul(amountTokens);
+        // uint256 amountFee = zutFee.mul(amountTokens);
+
+        uint256 amountFee = zutFee;
 
         // Collect fees in ZUT token
         zut.safeTransferFrom(_msgSender(), feeRecipient, amountFee);
