@@ -49,7 +49,7 @@ module.exports = {
       provider: () =>
         new HDWalletProvider(
           process.env.MATIC_PRIVATE_KEY,
-          `https://rpc-mainnet.maticvigil.com/`
+          `https://rpc-mainnet.matic.network`
         ),
       network_id: 137,
       gasPrice: 1e9,

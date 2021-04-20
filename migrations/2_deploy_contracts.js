@@ -6,7 +6,7 @@ const {
 const ForgeToken = artifacts.require("ForgeToken");
 const ZUT = artifacts.require("ZUT");
 
-const ETH_FEE = web3.utils.toWei("0.1");
+const ETH_FEE = web3.utils.toWei("10");
 const ZUT_FEE = web3.utils.toWei("0.005");
 
 const FEE_RECIPIENT = "0x8Aa0B4FB0d0E1bB95959BaE95F81D71D1c6b6fF7";
